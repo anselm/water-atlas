@@ -1,0 +1,7 @@
+name = "water-atlas"
+horizon = "2026"
+repo = "anselm/water-atlas"
+code = "local"
+deploy = "exe:water-atlas"
+autodeploy = true
+notes = ""
