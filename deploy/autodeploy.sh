@@ -8,7 +8,7 @@
 # previous run of the oneshot service finishes (OnUnitInactiveSec).
 set -euo pipefail
 
-REPO_URL="https://github.com/orbitalfoundation/water-atlas.git"
+REPO_URL="https://github.com/anselm/water-atlas.git"
 BRANCH="main"
 BASE="/srv/autodeploy"
 REPO="$BASE/repo"
