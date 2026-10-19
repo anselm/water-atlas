@@ -80,7 +80,7 @@ export function addLayerFromManifest(map, entry) {
     });
     map.addLayer({
       id: `${entry.layer}-count`, type: 'symbol', source: srcId, filter: ['has', 'point_count'],
-      layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 11 },
+      layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 11, 'text-font': ['Noto Sans Bold'] },
       paint: { 'text-color': '#5a2208' },
     });
     map.addLayer({

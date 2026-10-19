@@ -34,3 +34,10 @@ placeholder. Same one-line change applies there; not done in this pass.
 
 Autodeploy is on for this project, so the push that publishes this is Anselm's.
 (This project keeps its dated entries in `notes/`, not `devlog/`; left as is.)
+
+## Follow-up, same day
+
+The cluster-count symbol layer had no `text-font`, so MapLibre asked the new
+glyph endpoint for its default "Open Sans Regular, Arial Unicode MS Regular",
+which OpenFreeMap does not serve (one 404 per glyph range; the numbers still
+drew). Set `text-font` to `Noto Sans Bold`, which the positron style itself uses.
