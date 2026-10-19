@@ -12,24 +12,10 @@ export const MAP_ORDER = ['fill', 'line', 'gauge', 'reservoir', 'right'];
 // Official US Drought Monitor palette, D0 (abnormally dry) -> D4 (exceptional).
 const DM_COLORS = ['#ffff00', '#fcd37f', '#ffaa00', '#e60000', '#730000'];
 
-// Keyless raster basemap (CARTO light + OSM data). No API token required.
-const BASEMAP_STYLE = {
-  version: 8,
-  sources: {
-    carto: {
-      type: 'raster',
-      tiles: [
-        'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-        'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-        'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-      ],
-      tileSize: 256,
-      attribution:
-        '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-    },
-  },
-  layers: [{ id: 'carto', type: 'raster', source: 'carto' }],
-};
+// Keyless vector basemap from OpenFreeMap (OpenMapTiles schema over OpenStreetMap data; no key, no account).
+// Replaced CARTO's raster tiles on 2026-10-19: CARTO began serving an "API KEY REQUIRED" placeholder
+// tile to keyless requests. Attribution comes from the style's TileJSON.
+const BASEMAP_STYLE = 'https://tiles.openfreemap.org/styles/positron';
 
 // Default frame: the whole West Coast footprint (San Diego to the Canadian border).
 export function createMap(container, { center = [-119.8, 40.8], zoom = 4.8 } = {}) {

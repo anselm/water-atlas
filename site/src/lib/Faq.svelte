@@ -178,7 +178,7 @@
         A small pipeline: public APIs → a local SQLite database → exported static GeoJSON → a
         Svelte + MapLibre map. The collector is polite (rate-limited, resumable, cached) and each
         data source is one small file, so adding a layer is a drop-in. The basemap is keyless
-        OpenStreetMap data. Everything regenerates from public sources — the repo is the plumbing,
+        OpenStreetMap data via OpenFreeMap. Everything regenerates from public sources — the repo is the plumbing,
         not the data.
       </p>
     </details>
@@ -247,8 +247,8 @@
         <strong>Oregon Water Resources Dept</strong> and <strong>Nevada Division of Water
         Resources</strong> (their states' water rights), and the
         <strong>US Drought Monitor</strong> (a NOAA / USDA / National Drought Mitigation Center
-        partnership). It's all public data, fetched directly. The basemap is © OpenStreetMap
-        contributors © CARTO. We add no numbers of our own — where we derive something (like % full),
+        partnership). It's all public data, fetched directly. The basemap is © OpenMapTiles
+        © OpenStreetMap contributors, served by OpenFreeMap. We add no numbers of our own — where we derive something (like % full),
         the inputs are shown.
       </p>
     </details>
